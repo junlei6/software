@@ -1,0 +1,50 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+/rule_based_ner/__pycache__/
+/biobert_re/__pycache/
+/biobert_ner/__pycache__/
+
+# Flask stuff:
+instance/
+.webassets-cache
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# Spyder project settings
+.spyderproject
+.spyproject
+
+# Data files
+data/
+sample_ehr/
+processed_data/
+reports/
+biobert_ner/dataset*/
+biobert_ner/output*/
+bilstm-crf_ner/results/
+bilstm_crf_ner/output*/
+dataset/
+biobert_re/dataset*/
+biobert_re/output*/
+biobert_re/runs/
+ade_corpus/
+test_data/
+runs/
+results/
+notebooks/
+predicted_annotations/
+
+# IntelliJ files
+/annotating-ehr.iml
+/.idea/
+
+# Scratch files
+Scratch.ipynb
+Scrap.ipynb
+Untitled*.ipynb
+
+# Deployment files
+/.gcloudignore

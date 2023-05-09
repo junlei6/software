@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+.content {
+    padding-top: 0em;
+}
+.login-box{
+	padding:0;
+	min-height: 700px;
+}
+.login-main h1{
+	color: #08080B;
+	font-weight: 700;
+	font-size: 1.2em;
+	padding: 1em 0;
+}
+.login-main{
+	border-top: 1px solid #EEE;
+}
+.login-left{
+	float: right;
+	width: 43%;
+	margin-right: 1.9%;
+	border: 1px solid #EEE;
+	padding: 1em 1.5em;
+}
+.login-right{
+	float: right;
+	width: 43%;
+	margin-right: 0;
+	border: 1px solid #EEE;
+	padding: 1em 1.5em;
+}
+.login-right h3{
+	color:#08080B;
+	text-transform: capitalize;
+	line-height: 1.8em;
+}
+.login-left h3,.login-right h3{
+	color: #08080B;
+	font-weight: 700;
+	font-size: 1em;
+	padding-bottom: 0.5em;
+}
+.login-left p,.login-right p{
+	color: #08080B;
+	display: block;
+	font-size: 0.8em;
+	margin: 0 0 1.5em 0;
+	line-height: 1.8em;
+}
+.login-right p{
+	margin:0;
+}
+.acount-btn{
+	background: #0000fff0;
+	color: #FFF;
+	font-size: 0.8em;
+	padding: 0.7em 1.2em;
+	border-radius: 5px;
+	border-bottom: 4px solid #08080B;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	text-transform:uppercase;
+}
+.acount-btn:hover{
+	background: #1C1C20;
+	border-bottom: 4px solid #333;
+}
+.login-right form{
+	padding:1em 0; 
+}
+.login-right span{
+	color: #08080B;
+	font-weight: 700;
+	font-size: 0.875em;
+	padding-bottom: 0.2em;
+	display: block;
+	text-transform: uppercase;
+}
+.login-right span label{
+	color: #08080B;
+	height: 10px;
+	width: 10px;
+	display: inline-block;
+	vertical-align: top;
+	margin-left: 0.2em;
+}
+.login-right input[type="text"]{
+	border: 1px solid #EEE;
+	outline-color: #08080B;
+	width: 96%;
+	font-size: 1em;
+	padding: 0.5em;
+}
+.forgot{
+	color: #0303f2;
+	font-weight: 700;
+	font-size: 0.875em;
+	margin-bottom: 1em;
+	display: block;
+	text-transform: uppercase;
+	transition:0.5s all;
+	-webkit-transition:0.5s all;
+	-moz-transition:0.5s all;
+	-o-transition:0.5s all;
+}
+.forgot:hover{
+	color:#08080B;
+}
+.login-right form div{
+	padding: 0 0 0.5em 0;
+}
+.login-right input[type="submit"]{
+	background: #0000ff;
+	color: #FFF;
+	font-size: 0.8em;
+	padding: 0.7em 1.2em;
+	border-radius: 5px;
+	border-bottom: 4px solid #08080B;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	font-family: 'Open Sans', sans-serif;
+	cursor: pointer;
+	outline: none;
+	text-transform: uppercase;
+	border-right: none;
+	border-left: none;
+	border-top: none;
+}
+.login-right input[type="submit"]:hover{
+	background: #0000ff;
+	border-bottom: 4px solid #333;
+}
+.wrap{
+	width:70%;
+	margin:0 auto;
+}
+.clear{clear:both;}
+    </style>
+
+</head>
+<body>
+    <div class="content login-box">
+        <div class="login-main">
+            <div class="wrap">
+                <h1>水稻文献语义抽取平台</h1>
+                <div class="login-left">
+                    <h3>注册</h3>
+                    <p>在这你可以创建自己的账号</p>
+                    <a class="acount-btn" href="http://127.0.0.1:8000/register/">创建一个账号</a>
+                </div>
+                <div class="login-right">
+                    <h3>登录</h3>
+                    <p>如果你有账号，请您登录!</p>
+                    <form method="post">
+                        <div>
+                            <span>电子邮件账号:<label>*</label></span>
+                            <input type="text" name="account"> 
+                        </div>
+                        <div>
+                            <span>密码:<label>*</label></span>
+                            <input type="text" name="pwd"> 
+                        </div>
+                        <label style="color: red;">{{ tip }}</label>
+                        <a class="forgot" href="#">忘记密码？</a>
+                        <input type="submit" value="登录" />
+                    </form>
+                </div>
+                <div class="clear"> </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
